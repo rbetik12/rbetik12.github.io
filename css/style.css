@@ -1,0 +1,257 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Styles for navbar */
+
+.navbar-wrapper {
+    width: 100%;
+    position: fixed;
+    padding: 3em;
+    opacity: 0.5;
+    z-index: 500000;
+}
+
+.navbar-content {
+    font-size: 1.3em;
+}
+
+.navbar-list li {
+    display: inline-block;
+}
+
+.navbar-list li a, .navbar-list li a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-list li:nth-child(n+2) {
+    margin-left: 2em;
+}
+
+/* Styles for mobile navbar */
+
+.expand-button {
+    float: right;
+    border: 1px solid black;
+    padding: 0.5em 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+    width: 0em;
+    min-height: 0.6em;
+    background: 0.7em -0.09em url("../res/sprites/menu.svg") no-repeat;
+}
+
+.expand-button:hover{
+    border: 1px solid orange;
+}
+
+.navbar-wrapper-mobile {
+    width: 100%;
+    position: fixed;
+    z-index: 500000;
+    background-color: white;
+    /* min-height: 5em; */
+}
+
+.navbar-content-mobile::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.navbar-list-mobile {
+    display: none;
+    float: left;
+    opacity: 0;
+}
+
+.navbar-list-mobile li {
+    color: black;
+    padding: 1em;
+}
+
+.navbar-list-mobile li a, .navbar-list-mobile li a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+/* Styles for social-media-list */
+
+.social-media-wrapper {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    width: 2em;
+    margin-right: -10em;
+}
+
+/* Styles for social media icons */
+
+.social-media-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+/* Styles for main-page */
+
+.main-page-wrapper {
+    width: auto;
+    min-height: 100vh;
+    background: url("../res/spb.jpg") no-repeat;
+    background-position: right;
+}
+
+.main-page-text {
+    font-size: 30px;
+    color: white;
+    padding-top: 4em;
+    text-align: center;
+    opacity: 0.8;
+}
+
+em {
+    font-family: 'Courgette', cursive;
+}
+
+/* Styles for about me */
+
+.about-me-wrapper {
+    background-color: #202021;
+    text-align: center;
+    min-height: 50vh;
+}
+
+.about-me-content {
+    padding: 2em 25em;
+    color: white;
+    display: inline-block;
+    text-align: left;
+}
+
+.about-me-header {
+    letter-spacing: 0.2em;
+    font-size: 2.5em;
+}
+
+.about-me-text {
+    padding-top: 1em;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+/* Styles for technologies */
+
+.technologies-wrapper {
+    text-align: center;
+    background-color: #0f0f0f;
+}
+
+.technologies-content {
+    padding: 2em;
+    display: inline-block;
+}
+
+.block {
+    margin-left: 3em;
+    float: left;
+    padding: 1em;
+    width: 10em;
+    color: white;
+}
+
+.block>ul {
+    list-style: disc;
+    list-style-image: 10px 10px url("../res/tick.png");
+}
+
+.technologies-wrapper::after {
+    content: ' ';
+    clear: both;
+    display: table;
+}
+
+/* Code for optimising page for mobile and tablets screens size */
+
+@media all and (max-width: 400px) {
+    .technologies-content {
+        padding: 3em;
+    }
+}
+
+@media all and (max-width: 1520px) {
+    .about-me-content {
+        padding-right: 15em;
+        padding-left: 15em;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .about-me-content {
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+    .technologies-content {
+        padding: 1em;
+    }
+
+    .block {
+        width: 50%;
+        float: none;
+    }
+}
+
+@media all and (max-width: 700px){
+    .about-me-content {
+        padding: 2em 2em;
+    }
+    .main-page-text {
+        padding-top: 2em;
+    }
+}
+
+/* Styles for social media circles */
+
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+/* Styles for online courses list */
+
+.online-courses-list{
+    margin: 1.1em;
+}
+
+.online-courses-list li{
+    margin-top: 0.5em;
+}
+
+.online-courses-list li a, .online-courses-list li a:visited{
+    color: white;
+}
+
+.online-courses-list li a:hover {
+    opacity: 0.5;
+}
+
+.menu-button {
+    z-index: 4000;
+}
+
