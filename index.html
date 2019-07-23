@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap" rel="stylesheet">
     <link href="res/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="application/javascript"></script>
 </head>
 
 <body>
@@ -16,17 +16,21 @@
         <div class="navbar-content">
             <ul class="navbar-list">
                 <li><a href="#about-me">About me</a></li>
-                <!-- <li><a href="#">Projects</a></li> -->
+                <li><a href="/projects">Projects</a></li>
             </ul>
             <div class="expand-button"></div>
         </div>
     </div>
     <div class="main-page-wrapper" id="main-page">
+        <div class="pseudo-element">lol</div>
         <div class="main-page-text">
-            My name is Vitaliy Prikota and I am a developer<br>
-            <em>Self-learning CS adventurer...</em>
+            My name is Vitaliy Prikota and I am a...<br>
+            <em>Self-learning CS adventurer</em>
         </div>
+        <div class="contact-me-button">Contact me</div>
+        
     </div>
+    
     <div class="about-me-wrapper" id="about-me">
         <div class="about-me-content">
             <h2 class="about-me-header">About me</h2>
@@ -47,7 +51,7 @@
                             <li><a href="https://www.coursera.org/learn/cs-algorithms-theory-machines">Computer Science: Algorithms, Theory, and Machines</a></li>
                         </ul>
                     </li>
-                    <li>Begin learning something about electronics</li>
+                    <li>Begin learning something about electronic circuits</li>
                 </ul>
             </div>
         </div>
@@ -71,6 +75,8 @@
                 <h1>Others</h1>
                 <ul>
                     <li>Git</li>
+                    <li>Qt/QML</li>
+                    <li>PostgreSQL</li>
                 </ul>
             </div>
             <div class="technologies-languages block">
@@ -97,8 +103,18 @@
         </div>
     </div>
     
-    <script src="js/animation_controller.js"></script>
-    <script src="js/animation_controller_mobile.js"></script>
+    <script src="js/animation_controller.js" type="application/javascript"></script>
+    <script src="js/animation_controller_mobile.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        $(".contact-me-button").click((e) => {
+            e.preventDefault();
+            alert("Huh");
+            var email = 'mr.prikota@gmail.com';
+            var subject = 'Contact';
+            var emailBody = 'Hey! I wanted to tell you something.';
+            window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+        })
+    </script>
 </body>
 
 </html>

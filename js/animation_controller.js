@@ -1,6 +1,6 @@
 function socialMediaLeftSlideAnimation() {
     $(".social-media-wrapper").animate({
-        marginRight: "+=11em"
+        marginRight: "1em"
     }, "slow", function () {
         // console.log("Left slide completed");
     })
@@ -8,7 +8,7 @@ function socialMediaLeftSlideAnimation() {
 
 function socialMediaRightSlideAnimation() {
     $(".social-media-wrapper").animate({
-        marginRight: "-=11em"
+        marginRight: "-11em"
     }, "slow", function () {
         // console.log("Right slide completed");
     })
@@ -16,7 +16,7 @@ function socialMediaRightSlideAnimation() {
 
 function navbarCollapse() {
     $(".navbar-wrapper").animate({
-        padding: "-=1.5em",
+        padding: "1.5em",
         fontSize: "-=0.2em",
         opacity: 1
     }, 300, function () {
@@ -37,7 +37,7 @@ function navbarExpand() {
         marginLeft: "-=2em"
     }, 100, function () {
         $(".navbar-wrapper").animate({
-            padding: "+=1.5em",
+            padding: "3em",
             fontSize: "+=0.2em",
             opacity: 0.5
         }, 300, function () {
@@ -77,5 +77,13 @@ $(window).scroll(function () {
     }
 });
 
-
-
+$(() => {
+    $(".main-page-text").animate({
+        right: 0,
+        opacity: 1 
+    }, 1700, () => {})
+    $(".contact-me-button").animate({
+        right: 0,
+        opacity: 1 
+    }, 1700, () => {})
+})

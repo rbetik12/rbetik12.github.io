@@ -9,6 +9,7 @@ function adaptNavbar() {
         //Resets attributes for navbar to prevent bugs
         $(".navbar-wrapper-mobile").removeAttr("style");
         $(".navbar-list-mobile").removeAttr("style");
+        $("body *").removeAttr("style");
         //Sets styles for higer width screens
         $(".navbar-wrapper-mobile").addClass("navbar-wrapper").removeClass("navbar-wrapper-mobile");
         $(".navbar-content-mobile").addClass("navbar-content").removeClass("navbar-content-mobile");
@@ -16,16 +17,18 @@ function adaptNavbar() {
         $(".expand-button").css("display", "none");
 
     } else {
+        navbarExpanded = false;
         $(".navbar-wrapper").removeAttr("style");
         //Sets styles for mobile screens
         $(".navbar-wrapper").removeClass("navbar-wrapper").addClass("navbar-wrapper-mobile");
         $(".navbar-content").removeClass("navbar-content").addClass("navbar-content-mobile");
         $(".navbar-list").removeClass("navbar-list").addClass("navbar-list-mobile");
         $(".expand-button").css("display", "block");
-        //Resets attributes for list items to prevent bugs 
+        //Resets attributes for elements items to prevent bugs 
         for (let i = 0; i < $(".navbar-list-mobile li a").length; i++) {
             $(".navbar-list-mobile li a").removeAttr("style");
         }
+        $("body *").removeAttr("style");
 
         $(".expand-button").click(() => {
             if ($(".navbar-wrapper-mobile").is(":animated") || $(".navbar-list-mobile").is(":animated")) return;

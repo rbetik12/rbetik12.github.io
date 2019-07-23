@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vitaliy Prikota</title>
+    <link href="css/style_projects.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap" rel="stylesheet">
+    <link href="res/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="navbar-content">
+            <ul class="navbar-list">
+                <li><a href="/">About me</a></li>
+                <li><a href="/projects">Projects</a></li>
+            </ul>
+            <div class="expand-button"></div>
+        </div>
+    </div>
+    <div style="width: 100%; height: 1em; background-color: transparent;"></div>
+    <div class="project-card-wrapper first-card">
+        <div class="project-card-content">
+
+            <video autoplay loop muted playsinline id="project-video">
+                <source src="res/astar.mp4" type="video/mp4">
+            </video>
+
+            <div class="project-name">A* Star visualization</div>
+            <div class="project-disc">Wrote with pure JS on QML framework. That project was my one of my university tasks.
+                That project helped me to learn new GUI technology and another path finding algorithm.
+            </div>
+        </div>
+    </div>
+    <div class="project-card-wrapper">
+        <div class="project-card-content">
+                <video autoplay loop muted playsinline id="project-video2">
+                        <source src="res/github_app.mp4" type="video/mp4">
+                    </video>
+            <div class="project-name">Github repositories viewer</div>
+            <div class="project-disc">That was my first web application. Wrote it using React.js and Node.js. It uses GitHub API to get user's repositories info, like
+                name or last update name.
+            </div>
+        </div>
+    </div>
+    <script src="js/animation_controller_projects.js"></script>
+</body>
+
+
+</html>

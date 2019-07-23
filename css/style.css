@@ -3,6 +3,7 @@ body {
     margin: 0;
     overflow: auto;
     font-family: 'Roboto', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 ul {
@@ -10,6 +11,8 @@ ul {
     margin: 0;
     list-style-type: none;
 }
+
+
 
 /* Styles for navbar */
 
@@ -29,7 +32,8 @@ ul {
     display: inline-block;
 }
 
-.navbar-list li a, .navbar-list li a:visited{
+.navbar-list li a,
+.navbar-list li a:visited {
     text-decoration: none;
     color: white;
 }
@@ -52,7 +56,7 @@ ul {
     background: 0.7em -0.09em url("../res/sprites/menu.svg") no-repeat;
 }
 
-.expand-button:hover{
+.expand-button:hover {
     border: 1px solid orange;
 }
 
@@ -81,7 +85,8 @@ ul {
     padding: 1em;
 }
 
-.navbar-list-mobile li a, .navbar-list-mobile li a:visited{
+.navbar-list-mobile li a,
+.navbar-list-mobile li a:visited {
     text-decoration: none;
     color: black;
 }
@@ -91,7 +96,7 @@ ul {
 .social-media-wrapper {
     position: fixed;
     right: 0;
-    top: 40%;
+    top: 30%;
     width: 2em;
     margin-right: -10em;
 }
@@ -106,23 +111,60 @@ ul {
 
 /* Styles for main-page */
 
+.pseudo-element {
+    opacity: 0;
+}
+
 .main-page-wrapper {
     width: auto;
     min-height: 100vh;
-    background: url("../res/spb.jpg") no-repeat;
-    background-position: right;
+    background: url("../res/spb2.jpg") no-repeat;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .main-page-text {
+    position: absolute;
+    left: 0;
+    right: -200%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 5em;
+    width: fit-content;
     font-size: 30px;
     color: white;
-    padding-top: 4em;
+    background-color: #202021;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0;
 }
 
 em {
     font-family: 'Courgette', cursive;
+}
+
+.contact-me-button {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 0;
+    right: -200%;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    width: 6em;
+    padding: 0.5em;
+    background-color: #202021;
+    border: none;
+    color: white;
+}
+
+.contact-me-button:hover {
+    background-color: #0f0f0f;
 }
 
 /* Styles for about me */
@@ -173,7 +215,6 @@ em {
 
 .block>ul {
     list-style: disc;
-    list-style-image: 10px 10px url("../res/tick.png");
 }
 
 .technologies-wrapper::after {
@@ -202,6 +243,7 @@ em {
         padding-right: 5em;
         padding-left: 5em;
     }
+
     .technologies-content {
         padding: 1em;
     }
@@ -212,12 +254,9 @@ em {
     }
 }
 
-@media all and (max-width: 700px){
+@media all and (max-width: 700px) {
     .about-me-content {
         padding: 2em 2em;
-    }
-    .main-page-text {
-        padding-top: 2em;
     }
 }
 
@@ -235,15 +274,16 @@ em {
 
 /* Styles for online courses list */
 
-.online-courses-list{
+.online-courses-list {
     margin: 1.1em;
 }
 
-.online-courses-list li{
+.online-courses-list li {
     margin-top: 0.5em;
 }
 
-.online-courses-list li a, .online-courses-list li a:visited{
+.online-courses-list li a,
+.online-courses-list li a:visited {
     color: white;
 }
 
@@ -255,3 +295,6 @@ em {
     z-index: 4000;
 }
 
+a {
+    text-decoration: none;
+}
