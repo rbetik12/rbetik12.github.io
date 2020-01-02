@@ -128,7 +128,7 @@ ul {
 .main-page-text {
     position: absolute;
     left: 0;
-    right: -200%;
+    right: -100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -151,7 +151,7 @@ em {
     text-align: center;
     top: 90%;
     left: 0;
-    right: -200%;
+    right: -100%;
     opacity: 0;
     margin-left: auto;
     margin-right: auto;

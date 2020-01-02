@@ -81,9 +81,29 @@ $(() => {
     $(".main-page-text").animate({
         right: 0,
         opacity: 1 
-    }, 1700, () => {})
+    }, 1700, () => {
+        $(window).resize(()=> {
+            $(".main-page-text").css(
+            {
+                "right": "0px",
+                "opacity": "1"
+            }
+        );
+        });
+    })
+
     $(".contact-me-button").animate({
         right: 0,
         opacity: 1 
-    }, 1700, () => {})
+    }, 1700, () => {$(window).resize(()=> {
+        $(".contact-me-button").css(
+        {
+            "right": "0px",
+            "opacity": "1"
+        }
+    );
+    });})
+
+    
 })
+
