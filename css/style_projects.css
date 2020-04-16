@@ -57,6 +57,18 @@ ul {
     width: 50em;
 }
 
+.project-card-content a {
+    color: white;
+    text-decoration: none;
+}
+.project-card-content a:visited{
+    color: white;
+}
+
+.project-card-content a:hover {
+    text-decoration: underline;
+}
+
 @media all and (max-width: 940px) {
     #project-video2 {
         height: 15em;
